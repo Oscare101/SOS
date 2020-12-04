@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="tic_tac.css">
+    <script src="tic_tac.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__logo"><a class="header__logo" href="main.html"><</a></div>               
+                <nav class="nav">
+                    <a class="nav__link" href="rules_breakout.html">Rules</a>	
+                    <a class="nav__link" href="contacts.html">Contacts</a>	
+                    <a class="nav__link" href="registration.html">Account</a>	
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <table>
+        <tr>
+            <td class="cell" id="0"></td>
+            <td class="cell" id="1"></td>
+            <td class="cell" id="2"></td>
+        </tr>
+        <tr>
+            <td class="cell" id="3"></td>
+            <td class="cell" id="4"></td>
+            <td class="cell" id="5"></td>
+        </tr>
+        <tr>
+            <td class="cell" id="6"></td>
+            <td class="cell" id="7"></td>
+            <td class="cell" id="8"></td>
+        </tr>
+    </table>
+    <div class="endgame">
+        <div class="text"></div>
+        <button onclick="startGame()">Replay</button>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+body {
+    background: radial-gradient(circle, skyblue, steelblue);
+}
+
+header {
+    font-size: 400%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+p {
+    font-size: 200%;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    
+}
+
+p::first-letter {
+    font-size: 220%;
+}
+
+p::after {
+    content: "";
+    display: block;
+    width: 1000px;
+    height: 1px;
+    background-color: black;
+    margin: 2% auto;
+}

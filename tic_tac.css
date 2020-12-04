@@ -1,0 +1,124 @@
+body {
+    background: radial-gradient(circle, skyblue, steelblue);
+}
+
+td {
+    border: 2px solid #333;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    vertical-align: middle;
+    font-family: "Comic Sans MS", cursive;
+    font-size: 70px;
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+table tr:first-child td {
+    border-top: none;
+}
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+table tr td:first-child {
+    border-left: none;
+}
+
+table tr td:last-child {
+    border-right: none;
+}
+
+.endgame {
+    display: none;
+    width: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(205, 133, 63, 0.8);
+    padding: 50px 0;
+    text-align: center;
+    border-radius: 5px;
+    color: #ddd;
+    font-size: 2em;
+}
+
+.header{                /*шапка*/
+	padding-top: 30px;   /*отступ о верха*/
+	width: 100%;
+	position: absolute;    
+	top: 0;
+	left: 0;
+	right:0 ;
+	z-index: 1000;
+}
+
+.header__inner{
+	display: flex;           /*лого и меню займут крайне места*/
+	justify-content: space-between;
+	align-items: center;
+    max-width: 100%;
+    margin-left: 4%;
+}
+
+.header__logo {
+	font-size: 50px;     /*стиль логотипа*/
+	font-weight: 1200;   /*толшина букв лого*/
+    color: rgb(0, 0, 0); 
+    text-decoration: none;
+}
+
+/* nav */
+
+.nav {
+	font-size: 18px;    /*размер кнопок меню*/
+	text-transform: uppercase;     /*верхний регистр*/
+}
+
+header__logo {
+    text-decoration: none;
+    color: black;
+    font-size: 40px;
+}
+
+.nav__link {
+	display: inline-block;     /*ориентация кнопок меню*/
+	vertical-align: top;
+	margin: 0 10px;     /*растояние между кнопками меню*/
+	position: relative;
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+	transition: color 0.2s linear;   /*время засвета на кнопке меню при наводке*/
+}
+
+.nav__link:after {    /*полоска под кнопкой меню*/
+	content: "";
+	display: block;
+	width: 100%;
+	height: 3px;
+	opacity: 0;    /*неактивна до наведения*/
+	background-color: #fce38a;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 1;
+	transition: opacity 0.2s linear;  /*планое подчеркивание кнопки меню*/ 
+}
+
+.nav__link:hover {
+	color: #fce38a;     /*цвет при наводке*/
+}
+
+.nav__link:hover:after {
+	opacity: 1;
+}
+

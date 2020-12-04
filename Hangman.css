@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    background: radial-gradient(circle, skyblue, steelblue);
+    font-family: helvetica;
+    color: #ddd;
+    overflow: hidden;
+}
+
+.header {
+    text-align: right;
+    margin-right: 0%;
+}
+
+.nav_link {
+    text-decoration: none;  
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 150%;
+    margin-right: 2%;
+}
+
+.nav_link:hover {
+    color: rgba(173, 231, 224, 0.61);
+    transition: 0.2s linear;
+}
+
+
+.header_link:hover {
+    background-color: black;        
+    color: white;
+    transition: 0.2s linear;
+}
+
+.nav_a {
+    font-size: 200%;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin-left: 5%;
+}
+
+h1 {
+    margin: 30px 0 0;
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+    font-size: 350%;
+    color: rgb(173, 231, 224);
+}
+
+p {
+    margin: 20px 0 0;
+    text-align: center;
+    color: rgb(173, 231, 224);
+}
+
+.box {
+    margin: auto;
+    padding: 20px 30px;
+    position: relative;
+    width: 450px;
+    height: 350px;
+}
+
+svg {
+    fill: transparent;
+    stroke: #222;
+    stroke-width: 4px;
+    stroke-linecap: round;
+}
+
+.part {
+    display: none;
+}
+
+.wrong-letters {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.wrong-letters span {
+    margin: 0 3px;
+    font-size: 24px;
+}
+
+.word {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+}
+
+.letter {
+    margin: 0 3px;
+    width: 20px;
+    height: 50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    border-bottom: 3px solid forestgreen;
+}
+
+.popup {
+    padding: 20px;
+    background: rgba(0, 0, 0, .3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 15px 10px 3px rgba(0, 0, 0, .1);
+    font-size: 24px;
+    text-align: center;
+}
+
+.popup button {
+    padding: 12px 20px;
+    margin-top: 20px;
+    background: #ddd;
+    color: #222;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.popup button:active {
+    transform: scale(.98);
+}
+
+.notification {
+    padding: 15px 20px;
+    position: absolute;
+    bottom: -50px;
+    margin-left: 41%;
+    background: rgba(0, 0, 0, .3);
+    border-radius: 10px 10px 0 0;
+    transition: transform .3s ease-in-out;
+}
+    
+.notification.show {
+    transform: translateY(-50px);
+}
+
+
+
+
+
+
+.header{                /*шапка*/
+	padding-top: 30px;   /*отступ о верха*/
+	width: 100%;
+	position: absolute;    
+	top: 0;
+	left: 0;
+	right:0 ;
+	z-index: 1000;
+}
+
+.header__inner{
+	display: flex;           /*лого и меню займут крайне места*/
+	justify-content: space-between;
+	align-items: center;
+    max-width: 100%;
+    margin-left: 4%;
+}
+
+.header__logo {
+	font-size: 50px;     /*стиль логотипа*/
+	font-weight: 1200;   /*толшина букв лого*/
+    color: rgb(0, 0, 0); 
+    text-decoration: none;
+}
+
+/* nav */
+
+.nav {
+	font-size: 18px;    /*размер кнопок меню*/
+	text-transform: uppercase;     /*верхний регистр*/
+}
+
+header__logo {
+    text-decoration: none;
+    color: black;
+    font-size: 40px;
+}
+
+.nav__link {
+	display: inline-block;     /*ориентация кнопок меню*/
+	vertical-align: top;
+	margin: 0 10px;     /*растояние между кнопками меню*/
+	position: relative;
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+	transition: color 0.2s linear;   /*время засвета на кнопке меню при наводке*/
+}
+
+.nav__link:after {    /*полоска под кнопкой меню*/
+	content: "";
+	display: block;
+	width: 100%;
+	height: 3px;
+	opacity: 0;    /*неактивна до наведения*/
+	background-color: #fce38a;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 1;
+	transition: opacity 0.2s linear;  /*планое подчеркивание кнопки меню*/ 
+}
+
+.nav__link:hover {
+	color: #fce38a;     /*цвет при наводке*/
+}
+
+.nav__link:hover:after {
+	opacity: 1;
+}

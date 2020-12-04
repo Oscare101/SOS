@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="registration.css">
+		<title>registration</title>
+		<script type="text/javascript" src="registration.js">
+			
+		</script>
+	</head>
+	<body>
+		<header><a class="nav_main" href="main.html" title="Back to main page"><</a></header>
+		
+		<form action="/action_page.php">
+		  <div class="container">
+			<h1>Регистрация</h1>
+			<p>Создайте свой аккаунт</p>
+			<hr>
+
+			<label for="email"><b>Email</b></label>
+			<input type="text" placeholder="Enter Email" name="email" required>    # enter email
+
+			<label for="psw"><b>Password</b></label>
+			<input type="password" placeholder="Enter Password" name="psw" required>  # enter password
+
+			<label for="psw-repeat"><b>Repeat Password</b></label>
+			<input type="password" placeholder="Repeat Password" name="psw-repeat" required>  # repeat password
+			<hr>
+			
+			<button onclick="location.href = 'project.html'" type="submit" class="registerbtn">Зарегистрироваться</button>
+			
+		  </div>
+		  
+		  <div class="container signin">
+			<p>Уже имеете аккаунт? <a href="enter.html">Ввойти</a>.</p>
+		  </div>
+		</form>
+
+	</body>
+</html>
